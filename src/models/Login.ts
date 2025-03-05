@@ -1,4 +1,4 @@
-import {} from 'mongoose';
+import {Schema, model} from 'mongoose';
 
 
 const LoginSchema = new Schema({
@@ -9,5 +9,15 @@ const LoginSchema = new Schema({
     password: {
         type: String,
         required: true,
+    },
+    date: {
+        type: String,
+        required: true,
+    },
+    status: {
+        type: Boolean,
+        required: true,
     }
 });
+
+export default model('Login', LoginSchema);
